@@ -1,15 +1,15 @@
-Clothing Shop
+# Clothing Shop
 
 Да се напише програма, която имитира база от данни на магазин за дрехи. За целта е необходимо да се реализират класовете, показани на следната UML клас диаграма:
 
 
 1. ClothingItem (abstract class) със следните член-данни:
---Name(dress, trousers, shirt, ect.)
---Type(casual, sportswear, couture)
---Size
---Gender
---Price
---Numuber available.
+-- Name(dress, trousers, shirt, ect.)
+-- Type(casual, sportswear, couture)
+-- Size
+-- Gender
+-- Price
+-- Numuber available.
 
 2. Casual(derived from ClothingItem);
 3. SportsWear(derived from ClothingItem);
