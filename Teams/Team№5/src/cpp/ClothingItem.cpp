@@ -1,5 +1,4 @@
 #include"ClothingItem.h"
-#include<iostream>
 
 ClothingItem::ClothingItem() : name(), price(0), numAvailable(0)
 {}
