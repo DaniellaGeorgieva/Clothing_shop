@@ -1,6 +1,5 @@
 #include"String.h"
 #include<cstring>
-#include"Constants.h"
 #pragma warning (disable: 4996)
 
 void String::copy(const String& other)
