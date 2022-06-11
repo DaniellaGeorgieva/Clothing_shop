@@ -27,6 +27,12 @@
  - Profit
  - Clothing Items - списък от налични дрехи
  - Sold log - списък от всички продадени дрехи.
-  
-	
+ - Минимални функционалности:
+ - - AddClothingItem
+ - - DeleteClothingItem - mark it as sold;
+ - - List available items;
+ - - List sold items;
+ - - Export sold log
+ - - Display - извежда информация за магазина (име, адрес, печалба).
+  	
 Да се реализират подходящи член-функции/методи.
