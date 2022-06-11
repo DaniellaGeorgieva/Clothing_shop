@@ -9,7 +9,7 @@
  - Size
  - Gender
  - Price
- - Numuber available.
+ - Number available.
 
 2. Casual(derived from ClothingItem);
 
