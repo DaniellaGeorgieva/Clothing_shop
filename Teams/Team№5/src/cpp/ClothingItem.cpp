@@ -1,7 +1,7 @@
 #include"ClothingItem.h"
 #include<iostream>
 
-ClothingItem::ClothingItem(): name(), price(0), numAvailable(0)
+ClothingItem::ClothingItem() : name(), price(0), numAvailable(0)
 {}
 ClothingItem::ClothingItem(const String& name, const double price, const size_t numAvailable) : name(name), price(price), numAvailable(numAvailable)
 {}
@@ -11,25 +11,24 @@ void ClothingItem::setName(const String& name)
 	this->name = name;
 }
 
-void ClothingItem::setPrice(const double price) 
+void ClothingItem::setPrice(const double price)
 {
 	this->price = price;
 }
-void ClothingItem::setNumAvailable(const size_t numAvailable) 
+void ClothingItem::setNumAvailable(const size_t numAvailable)
 {
 	this->numAvailable = numAvailable;
 }
-
-Type ClothingItem::getType() const
+ClothingItem::Type ClothingItem::getType() const
 {
 	return Type::UNKNOWN;
 }
-Gender ClothingItem::getGender() const
+ClothingItem::Gender ClothingItem::getGender() const
 {
 	return Gender::UNISEX;
 }
 
-Size ClothingItem::getSize() const
+ClothingItem::Size ClothingItem::getSize() const
 {
 	return Size::UNKNOWN;
 }
