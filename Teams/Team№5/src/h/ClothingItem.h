@@ -40,8 +40,8 @@ public:
 	void setNumAvailable(const size_t);
 
 	virtual Type getType() const;
-	virtual Gender getGender() const;
-	virtual Size getSize() const;
+	Gender getGender() const;
+	Size getSize() const;
 
 	String getName() const;
 	double getPrice() const;

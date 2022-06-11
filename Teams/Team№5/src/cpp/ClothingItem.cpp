@@ -25,12 +25,12 @@ ClothingItem::Type ClothingItem::getType() const
 }
 ClothingItem::Gender ClothingItem::getGender() const
 {
-	return Gender::UNISEX;
+	return gender;
 }
 
 ClothingItem::Size ClothingItem::getSize() const
 {
-	return Size::UNKNOWN;
+	return size;
 }
 
 String ClothingItem::getName() const
