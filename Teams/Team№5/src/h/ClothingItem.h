@@ -23,7 +23,6 @@ protected:
 		XXL,
 		UNKNOWN
 	}size;
-private:
 
 	String name;
 	double price;
