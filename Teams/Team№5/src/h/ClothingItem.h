@@ -11,27 +11,45 @@ protected:
 	enum Type {
 		Casual,
 		Sportswear,
-		Couture
+		Couture,
+		UNKNOWN
 	} type;
+	enum Size {
+		XS,
+		S,
+		M,
+		L,
+		XL,
+		XXL,
+		UNKNOWN
+	}size;
 private:
 
 	String name;
-	String size;
 	double price;
+	size_t numAvailable;
 
 public:
 	ClothingItem();
-	ClothingItem(const String&, const String&, const double);
+	ClothingItem(const String&, const double, const size_t);
 
 	virtual ~ClothingItem() = default;
 
 	void setName(const String&);
-	void setSize(const String&);
 	void setPrice(const double);
+	void setNumAvailable(const size_t);
+
+	virtual Type getType() const;
+	virtual Gender getGender() const;
+	virtual Size getSize() const;
 
 	String& getName() const;
-	String& getSize() const;
 	double getPrice() const;
+	size_t getNumAvailable() const;
+
+	virtual const char* typeToStr() const;
+	virtual const char* sizeToStr() const;
+	virtual const char* genderToStr() const;
 
 	virtual ClothingItem* clone() const = 0;
 	virtual void print() const;
