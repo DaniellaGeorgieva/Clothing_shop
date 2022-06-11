@@ -3,18 +3,18 @@
 
 class ClothingItem {
 protected:
-	enum Gender {
+	enum class Gender {
 		MAN,
 		WOMAN,
 		UNISEX
 	} gender;
-	enum Type {
+	enum class Type {
 		Casual,
 		Sportswear,
 		Couture,
 		UNKNOWN
 	} type;
-	enum Size {
+	enum class Size {
 		XS,
 		S,
 		M,

@@ -2,7 +2,7 @@
 
 ClothingItem::Type Couture::getType() const
 {
-	return ClothingItem::Couture;
+	return ClothingItem::Type::Couture;
 }
 
 

@@ -2,7 +2,7 @@
 
 ClothingItem::Type Casual::getType() const
 {
-	return ClothingItem::Casual;
+	return ClothingItem::Type::Casual;
 }
 
 

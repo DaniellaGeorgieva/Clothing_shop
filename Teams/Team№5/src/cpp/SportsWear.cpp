@@ -2,7 +2,7 @@
 
 ClothingItem::Type SportsWear::getType() const
 {
-	return ClothingItem::Sportswear;
+	return ClothingItem::Type::Sportswear;
 }
 
 
