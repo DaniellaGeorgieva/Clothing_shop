@@ -33,7 +33,7 @@ ClothingItem::Size ClothingItem::getSize() const
 	return Size::UNKNOWN;
 }
 
-String& ClothingItem::getName() const
+String ClothingItem::getName() const
 {
 	return name;
 }

@@ -43,7 +43,7 @@ public:
 	virtual Gender getGender() const;
 	virtual Size getSize() const;
 
-	String& getName() const;
+	String getName() const;
 	double getPrice() const;
 	size_t getNumAvailable() const;
 
@@ -53,5 +53,4 @@ public:
 
 	virtual ClothingItem* clone() const = 0;
 	virtual void print() const;
-
 };
