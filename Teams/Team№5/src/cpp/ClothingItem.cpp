@@ -18,13 +18,69 @@ void ClothingItem::setNumAvailable(const size_t numAvailable)
 {
 	this->numAvailable = numAvailable;
 }
-void ClothingItem::setGender(const Gender gender)
+void ClothingItem::setGender(const char& gender)
 {
-	this->gender = gender;
+	if (gender == 'M' || gender == 'm')
+	{
+		this->gender = Gender::MAN;
+		return;
+	}
+
+	if (gender == 'W' || gender == 'w')
+	{
+		this->gender = Gender::WOMAN;
+		return;
+	}
+
+	if (gender == 'U' || gender == 'u')
+	{
+		this->gender = Gender::UNISEX;
+		return;
+	}
 }
-void ClothingItem::setSize(const Size size)
+void ClothingItem::setSize(const String size)
 {
-	this->size = size;
+	if (size == "XS" || size == "xs")
+	{
+		this->size = Size::XS;
+		return;
+	}
+
+	if (size == "S" || size == "s")
+	{
+		this->size = Size::S;
+		return;
+	}
+
+	if (size == "M" || size == "m")
+	{
+		this->size = Size::M;
+		return;
+	}
+
+	if (size == "L" || size == "l")
+	{
+		this->size = Size::L;
+		return;
+	}
+
+	if (size == "XL" || size == "xl")
+	{
+		this->size = Size::XL;
+		return;
+	}
+
+	if (size == "XXL" || size == "xxl")
+	{
+		this->size = Size::XXL;
+		return;
+	}
+
+	if (size == "O" || size == "o")
+	{
+		this->size = Size::UNKNOWN;
+		return;
+	}
 }
 ClothingItem::Type ClothingItem::getType() const
 {
