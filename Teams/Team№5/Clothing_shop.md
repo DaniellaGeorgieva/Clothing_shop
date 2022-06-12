@@ -39,4 +39,5 @@
 Да се реализират подходящи член-функции/методи.
 
 # Документация:
-[ClothingShopDocumentation](https://www.google.com)
+[Идея-за-проект.docx](https://github.com/DaniellaGeorgieva/Clothing_shop/files/8886113/-.-.docx)
+
