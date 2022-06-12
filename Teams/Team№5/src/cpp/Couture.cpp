@@ -3,6 +3,11 @@
 Couture::Couture(const String& name, const double price, const size_t numAvailable) :ClothingItem(name, price, numAvailable)
 {}
 
+void Couture::setDesigner(const String& designer)
+{
+	this->designer = designer;
+}
+
 ClothingItem::Type Couture::getType() const
 {
 	return ClothingItem::Type::Couture;
@@ -26,4 +31,5 @@ String Couture::getData() const
 void Couture::print() const
 {
 	ClothingItem::print();
+	std::cout << "Designer: " << designer << std::endl;
 }
