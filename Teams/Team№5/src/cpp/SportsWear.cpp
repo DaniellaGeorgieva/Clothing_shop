@@ -31,4 +31,5 @@ String SportsWear::getData() const
 void SportsWear::print() const
 {
 	ClothingItem::print();
+	std::cout << "Sport: " << sport << std::endl;
 }
