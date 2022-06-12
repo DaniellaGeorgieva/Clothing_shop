@@ -8,6 +8,11 @@ ClothingItem::Type SportsWear::getType() const
 	return ClothingItem::Type::Sportswear;
 }
 
+void SportsWear::setSport(const String& sport)
+{
+	this->sport = sport;
+}
+
 const char* SportsWear::typeToStr() const
 {
 	return "SportsWear";
