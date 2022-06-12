@@ -33,6 +33,11 @@ ClothingContainer::~ClothingContainer()
 	free();
 }
 
+double ClothingContainer::getPrice(size_t index)
+{
+	return container[index]->getPrice();
+}
+
 void ClothingContainer::AddClothingItem(ClothingItem& item)
 {
 	if (size >= capacity)
@@ -96,9 +101,9 @@ void ClothingContainer::ListSoldItems()
 	}
 }
 
-void ClothingContainer::ExportSoldLog(const char* filePath)
+void ClothingContainer::ExportSoldLog()
 {
-	std::ofstream writeFile(filePath, std::ios::app);
+	std::ofstream writeFile("logFile.txt", std::ios::app);
 	for (size_t i = 0; i < logSize; i++)
 	{
 		writeFile << log[i] << "\nPrice: " << logPrice[i] << std::endl;
