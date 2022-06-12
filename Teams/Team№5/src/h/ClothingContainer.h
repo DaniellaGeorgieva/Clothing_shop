@@ -21,7 +21,7 @@ public:
 	bool DeleteClothingItem(size_t);
 	void ListAvailableItems();
 	void ListSoldItems();
-	void ExportSoldLog(const char*);
+	void ExportSoldLog();
 
 private:
 	void resize();
