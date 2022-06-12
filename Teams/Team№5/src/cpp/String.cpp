@@ -70,7 +70,7 @@ void String::concat(const String& other)
 	size = size + other.size;
 	char* temp = new char[size + 1];
 	strcpy(temp, str);
-	strcpy(temp, other.str);
+	strcat(temp, other.str);
 
 	delete[] str;
 	str = temp;
