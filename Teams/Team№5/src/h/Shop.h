@@ -8,7 +8,7 @@ private:
 	String shopName;
 	String address;
 	double profit;
-	//clothing items container
+	ClothingContainer listOfClothes;
 public:
 	Shop();
 
