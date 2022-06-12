@@ -1,10 +1,12 @@
 #include "SportsWear.h"
 
+SportsWear::SportsWear(const String& name, const double price, const size_t numAvailable) :ClothingItem(name,price,numAvailable)
+{}
+
 ClothingItem::Type SportsWear::getType() const
 {
 	return ClothingItem::Type::Sportswear;
 }
-
 
 const char* SportsWear::typeToStr() const
 {
@@ -16,12 +18,12 @@ ClothingItem* SportsWear::clone() const
 	return new SportsWear(*this);
 }
 
+String SportsWear::getData() const
+{
+	return ClothingItem::getData();
+}
+
 void SportsWear::print() const
 {
-	std::cout << "Name: " << name << std::endl
-		<< "Price: " << price << std::endl
-		<< "Size: " << sizeToStr() << std::endl
-		<< "Number available: " << numAvailable << std::endl
-		<< "Type: " << "SportsWear" << std::endl
-		<< "Gender: " << genderToStr() << std::endl;
+	ClothingItem::print();
 }
