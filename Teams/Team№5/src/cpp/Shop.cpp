@@ -1,9 +1,12 @@
 #include"Shop.h"
+#include"Casual.h"
+#include"Couture.h"
+#include"SportsWear.h"
 
 Shop::Shop()
 {
-	name();
-	address();
+	shopName = "";
+	address = "";
 	profit = 0;
 
 }
@@ -20,9 +23,9 @@ double Shop::getProfit() const
 	return profit;
 }
 
-void Shop::setName(const String& newOne)
+void Shop::setName(const String& name)
 {
-	name = newOne;
+	shopName = name;
 }
 void Shop::setAddress(const String& address)
 {
@@ -41,7 +44,58 @@ void Shop::displayShopInfo() const
 }
 void Shop::diplayAddDialog()
 {
-	//code depending on add functtion from the container
+	std::cout << "Name of piece of clothing: \n>";
+	String name;
+	std::cin >> name;
+	std::cout << "Gender (M for Man, W for Woman, U for Unisex: \n>";
+	char gender;
+	std::cin >> gender;
+	std::cout << "Size (XS-XXL or O for Other): \n>";
+	String size;
+	std::cin >> size;
+	std::cout << "Type (C for Casual, S for SportsWear, D for Couture/Designer): \n>";
+	char type;
+	std::cin >> type;
+	std::cout << "Price: \n>";
+	double price;
+	std::cin >> price;
+	std::cout << "Count to add (number > 0): \n>";
+	size_t countToAdd;
+	std::cin >> countToAdd;
+
+	if (type == 'c' || type == 'C')
+	{
+		Casual item(name, price, countToAdd);
+		item.setGender(gender);
+		item.setSize(size);
+		listOfClothes.AddClothingItem(item);
+	}
+
+	if (type == 's' || type == 'S')
+	{
+		SportsWear item(name, price, countToAdd);
+		item.setGender(gender);
+		item.setSize(size);
+		
+		std::cout << "Sport: \n>";
+		String sport;
+		std::cin >> sport;
+		item.setSport(sport);
+		listOfClothes.AddClothingItem(item);
+	}
+
+	if (type == 'd' || type == 'D')
+	{
+		Couture item(name, price, countToAdd);
+		item.setGender(gender);
+		item.setSize(size);
+
+		std::cout << "Designer: \n>";
+		String designer;
+		std::cin >> designer;
+		item.setDesigner(designer);
+		listOfClothes.AddClothingItem(item);
+	}
 }
 void Shop::displayListDialog()
 {
@@ -55,10 +109,10 @@ void Shop::displayListDialog()
 	std::cin >> command;
 
 	if (command == 'a' || command == 'A') {
-		//function from container
+		listOfClothes.ListAvailableItems();
 	}
 	else if (command == 'b' || command == 'B') {
-		//function from conatainer
+		listOfClothes.ListSoldItems();
 	}
 	else {
 		std::cout << "Invalid command!" << std::endl;
@@ -69,7 +123,8 @@ void Shop::displaySellDialog()
 	size_t index;
 	std::cout << "Write down the index of the clothing item you sold: ";
 	std::cin >> index;
-	//function from container
+	addToProfit(listOfClothes.getPrice(index));
+	listOfClothes.DeleteClothingItem(index);
 }
 void Shop::displayMenu()
 {
