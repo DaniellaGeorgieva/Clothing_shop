@@ -2,7 +2,7 @@
 #include"String.h"
 
 class ClothingItem {
-public:
+protected:
 	enum class Gender {
 		MAN,
 		WOMAN,
@@ -17,7 +17,7 @@ public:
 		XXL,
 		UNKNOWN
 	}size;
-protected:
+
 	enum class Type {
 		Casual,
 		Sportswear,
@@ -37,8 +37,8 @@ public:
 	void setName(const String&);
 	void setPrice(const double);
 	void setNumAvailable(const size_t);
-	void setGender(const Gender);
-	void setSize(const Size);
+	void setGender(const char&);
+	void setSize(const String);
 
 	virtual Type getType() const;
 	Gender getGender() const;
