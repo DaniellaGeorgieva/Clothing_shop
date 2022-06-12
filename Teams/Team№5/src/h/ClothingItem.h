@@ -2,18 +2,12 @@
 #include"String.h"
 
 class ClothingItem {
-protected:
+public:
 	enum class Gender {
 		MAN,
 		WOMAN,
 		UNISEX
 	} gender;
-	enum class Type {
-		Casual,
-		Sportswear,
-		Couture,
-		UNKNOWN
-	} type;
 	enum class Size {
 		XS,
 		S,
@@ -23,7 +17,13 @@ protected:
 		XXL,
 		UNKNOWN
 	}size;
-
+protected:
+	enum class Type {
+		Casual,
+		Sportswear,
+		Couture,
+		UNKNOWN
+	} type;
 	String name;
 	double price;
 	size_t numAvailable;
@@ -37,6 +37,8 @@ public:
 	void setName(const String&);
 	void setPrice(const double);
 	void setNumAvailable(const size_t);
+	void setGender(const Gender);
+	void setSize(const Size);
 
 	virtual Type getType() const;
 	Gender getGender() const;
@@ -51,5 +53,6 @@ public:
 	virtual const char* genderToStr() const;
 
 	virtual ClothingItem* clone() const = 0;
+	virtual String getData() const;
 	virtual void print() const;
 };
