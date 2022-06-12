@@ -3,9 +3,12 @@
 class SportsWear : public ClothingItem {
 	
 public:
+	SportsWear(const String& name, const double price, const size_t numAvailable);
+	
 	virtual Type getType() const override;
 	virtual const char* typeToStr() const override;
 	virtual ClothingItem* clone() const override;
+	virtual String getData() const override;
 	virtual void print() const override;
 };
 
